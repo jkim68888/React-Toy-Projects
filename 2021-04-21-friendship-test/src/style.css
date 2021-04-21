@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+}
+
+.App-wrapper{
+    max-width: 500px;
+    height: 100%;
+    margin: auto;
+    padding: 0 15px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    border-radius: 15px;
+}
+
+.logo-img{
+    position: relative;
+    left: calc(50% - 130px);
+    width: 260px;
+    height: auto;
+}
+
+.friendship-test-wrap{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 24px;
+    padding: 50px 0;
+}
+
+span{
+    color: #d50ce7;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+input{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button{
+    width: 15%;
+    height: 40px;
+    margin-left: 5%;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #0ca9e7;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
