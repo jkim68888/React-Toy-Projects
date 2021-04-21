@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Lifecycle from './Lifecycle';
 
 function App() {
+  const [is_show, setIsShow] = React.useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {is_show ? (<Lifecycle/>) : null}
+      <button style={{'margin':'20px'}} onClick={() => {setIsShow(false);}}>삭제</button>
     </div>
   );
 }
