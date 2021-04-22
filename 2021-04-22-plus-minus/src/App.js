@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   render(){
-    const nemo_count = Array.from({length: this.state.count});
+    const nemo_count = Array.from({length: this.state.count}, (v, i) => (i));
 
     return(
       <div className="App"> 
