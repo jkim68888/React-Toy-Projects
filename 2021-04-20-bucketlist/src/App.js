@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      list: ['영화관 가기', '자전거 타기'],
+      list: ['영화관 가기', '자전거 타기', '매일 책읽기'],
     };
     this.text = React.createRef();
   }
