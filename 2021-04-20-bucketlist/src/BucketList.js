@@ -6,7 +6,7 @@ const BucketList = (props) => {
         <div className="lists">
             {
                 my_lists.map((list, index) => {
-                    return (<div className="list-item" key={index}>{list}</div>);
+                    return (<div className="list-item" key={index} onClick={() => {props.history.push('/detail')}}>{list}</div>);
                 })
             }
         </div>

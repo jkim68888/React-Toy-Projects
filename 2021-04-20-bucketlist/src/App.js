@@ -1,5 +1,9 @@
 import React from 'react';
+import {Route, Switch} from 'react-router-dom';
+import {withRouter} from 'react-router';
 import BucketList from './BucketList';
+import Detail from './Detail';
+import NotFound from './NotFound';
 import './style.scss';
 
 class App extends React.Component {
@@ -25,7 +29,11 @@ class App extends React.Component {
         <div className="container">
             <h1 className="title">내 버킷리스트</h1>
             <hr className="line"/>
-            <BucketList list={this.state.list} />
+            <Switch>
+              <Route path="/" exact render={(props) => <BucketList history={this.props.history} list={this.state.list} />} />
+              <Route path="/detail" component={Detail} />
+              <Route component={NotFound} />
+            </Switch>
             <div className="add-list-wrap">
                 <h3>버킷리스트를 추가해주세요💖</h3>
                 <input type="text" ref={this.text}/>
@@ -37,4 +45,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App) ;

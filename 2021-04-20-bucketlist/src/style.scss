@@ -37,11 +37,12 @@
             padding: 16px;
             margin: 8px;
             background-color: aliceblue;
+            cursor: pointer;
 
-            /* &:hover{
+            &:hover{
                 background-color: slateblue;
                 color: #fff;
-            } */
+            }
         }
 
         .add-list-wrap{
