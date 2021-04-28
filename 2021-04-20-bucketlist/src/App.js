@@ -6,12 +6,31 @@ import Detail from './Detail';
 import NotFound from './NotFound';
 import './style.scss';
 
+import {connect} from 'react-redux';
+import {loadBrucket, createBucket, loadBucket} from './redux/modules/bucket';
+
+const mapStateToProps = (state) => {
+  return {bucket_list: state.bucket.list};
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    load: () => {
+      dispatch(loadBucket());
+    },
+
+    create: (bucket) => {
+      dispatch(createBucket(bucket));
+    }
+  };
+}
+
 class App extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      list: ['영화관 가기', '자전거 타기', '매일 책읽기'],
+      
     };
     this.text = React.createRef();
   }
@@ -19,8 +38,7 @@ class App extends React.Component {
   addList = () => {
     let list = this.state.list;
     const new_item = this.text.current.value;
-
-    this.setState({list: [...list, new_item]});
+    this.props.create(new_item);
   }
 
   render() {
@@ -30,8 +48,8 @@ class App extends React.Component {
             <h1 className="title">내 버킷리스트</h1>
             <hr className="line"/>
             <Switch>
-              <Route path="/" exact render={(props) => <BucketList history={this.props.history} list={this.state.list} />} />
-              <Route path="/detail" component={Detail} />
+              <Route path="/" exact render={(props) => <BucketList history={this.props.history} bucket_list={this.props.bucket_list} />} />
+              <Route path="/detail/:index" component={Detail} />
               <Route component={NotFound} />
             </Switch>
             <div className="add-list-wrap">
@@ -45,4 +63,4 @@ class App extends React.Component {
   }
 }
 
-export default withRouter(App) ;
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App)) ;

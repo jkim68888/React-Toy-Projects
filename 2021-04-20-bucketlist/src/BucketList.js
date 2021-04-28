@@ -1,12 +1,13 @@
 import React from 'react'; 
+import {useSelector, useDispatch} from 'react-redux';
 
 const BucketList = (props) => {
-    const my_lists = props.list;
+    const bucket_list = useSelector(state => state.bucket.list);
     return (
         <div className="lists">
             {
-                my_lists.map((list, index) => {
-                    return (<div className="list-item" key={index} onClick={() => {props.history.push('/detail')}}>{list}</div>);
+                bucket_list.map((list, index) => {
+                    return (<div className="list-item" key={index} onClick={() => {props.history.push('/detail/'+index)}}>{list}</div>);
                 })
             }
         </div>
