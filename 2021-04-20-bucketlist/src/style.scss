@@ -65,5 +65,21 @@
                 cursor: pointer;
             }
         }
+
+        .delete-list-wrap{
+            position: absolute;
+            bottom: 0; right: 0; left: 0; margin: auto;
+            height: 15%;
+            text-align: center;
+            border-top: 4px dotted #ddd;
+
+            .delete-btn{
+                width: 250px;
+                height: 35px;
+                margin: 0 auto;
+                cursor: pointer;
+            }
+        }
+
     }
 }
