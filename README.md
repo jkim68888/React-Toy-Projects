@@ -13,12 +13,12 @@
 
 ### 2. Bucketlist
 
-![bucketlist_bike](https://user-images.githubusercontent.com/75922558/115600340-91c34180-a317-11eb-9cc3-29df89e547e4.PNG)
+![bucket](https://user-images.githubusercontent.com/75922558/116692461-58659280-a9f7-11eb-8c72-0a803e9bf0f5.gif)
 
 
-- 부모 컴포넌트인 App.js 에서 리스트들을 state 로 정의
-- 자식 컴포넌트인 BucketList.js 에서 props 로 리스트 state 를 받아옴
-- 클래스 컴포넌트를 사용하여 state 를 정의
+- 리덕스로 버킷리스트의 데이터들을 관리
+- 리스트를 생성하고 삭제하는 리듀서 함수를 정의함
+- match 객체에서 url 파라미터의 인덱스를 가져와서 해당 리스트를 삭제하는 기능 구현
 
 <br>
 
