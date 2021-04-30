@@ -9,7 +9,7 @@ import NotFound from './NotFound';
 import './style.scss';
 
 import {connect} from 'react-redux';
-import {loadBucket, createBucket} from './redux/modules/bucket';
+import {loadBucket, createBucket, deleteBucket} from './redux/modules/bucket';
 
 const mapStateToProps = (state) => {
   return {bucket_list: state.bucket.list};
@@ -23,6 +23,10 @@ const mapDispatchToProps = (dispatch) => {
 
     create: (bucket) => {
       dispatch(createBucket(bucket));
+    },
+
+    delete: (bucket) => {
+      dispatch(deleteBucket(bucket));
     }
   };
 }
@@ -42,7 +46,7 @@ class App extends React.Component {
                 render={(props) =>
                   <> 
                     <BucketList history={this.props.history} bucket_list={this.props.bucket_list} />
-                    <AddList />
+                    <AddList create={this.props.create} />
                   </>
                 } 
               />
@@ -50,8 +54,8 @@ class App extends React.Component {
                 path="/detail/:index" 
                 render={(props) =>
                   <> 
-                    <Detail />
-                    <DeleteList />
+                    <Detail match={props.match} />
+                    <DeleteList match={props.match} history={this.props.history} delete={this.props.delete} />
                   </>
                 } 
               />
