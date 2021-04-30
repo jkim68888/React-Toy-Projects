@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
+import {Route, Switch} from 'react-router-dom';
 import Quiz from './components/Quiz';
 import Score from './components/Score';
 import Start from './components/Start';
+import NotFound from './components/NotFound';
 
 const App = () => {
-  const [page, setPage] = useState({page: 'quiz'});
 
   return (
-    <div className="App">
-      {page.page === 'start' && (<Start/>)}
-      {page.page === 'quiz' && (<Quiz/>)}
-      {page.page === 'score' && (<Score/>)}
-    </div>
+    <Switch>
+      <Route path="/" exact component={Start} />
+      <Route path="/quiz" component={Quiz} />
+      <Route path="/score" component={Score} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
