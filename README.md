@@ -6,12 +6,9 @@
 
 
 ## 내용
-### 1. Todo List
-- 구현중에 있습니다.
 
-<br>
 
-### 2. Bucketlist
+### 1. Bucketlist
 
 ![bucket](https://user-images.githubusercontent.com/75922558/116692461-58659280-a9f7-11eb-8c72-0a803e9bf0f5.gif)
 
@@ -22,7 +19,7 @@
 
 <br>
 
-### 3. 우정테스트
+### 2. 우정테스트
 
 ![friendship-test](https://user-images.githubusercontent.com/75922558/115601011-4198af00-a318-11eb-88a3-0f944af37b6a.gif)
 
@@ -34,7 +31,7 @@
 
 <br>
 
-### 4. 라이프사이클
+### 3. 라이프사이클
 
 ![lifecycle](https://user-images.githubusercontent.com/75922558/115601850-3c882f80-a319-11eb-8744-5862562195a6.gif)
 
@@ -44,7 +41,7 @@
 
 <br>
 
-### 5. 요소 삭제/추가 구현
+### 4. 요소 삭제/추가 구현
 
 ![plus-minus](https://user-images.githubusercontent.com/75922558/115615322-c809bc80-a329-11eb-9b8f-f40710e35d9c.gif)
 
