@@ -1,6 +1,6 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { MdDone, MdDelete } from "react-icons/md";
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { MdDone, MdDelete } from 'react-icons/md';
 
 const Remove = styled.div`
   opacity: 0;
@@ -25,7 +25,7 @@ const CheckCircle = styled.div`
   justify-content: center;
   margin-right: 20px;
   cursor: pointer;
-  ${(props) =>
+  ${props =>
     props.done &&
     css`
       border: 1px solid #38d9a9;
@@ -36,7 +36,7 @@ const Text = styled.div`
   flex: 1;
   font-size: 21px;
   color: #495057;
-  ${(props) =>
+  ${props =>
     props.done &&
     css`
       color: #ced4da;
